@@ -1,0 +1,13 @@
+name: Verificar site
+on: [push]
+jobs:
+  verficar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: logando no servidor
+        run: echo "logando no servidor"
+      - name: Verificar index.html
+        run: test -f index.html
+      - name: Listar arquivos
+        run: ls -1  
